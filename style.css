@@ -1,0 +1,650 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Parisienne&family=Playfair+Display:wght@400;500;600;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap");
+
+:root {
+  --cream: #f8f3ed;
+  --cream-dark: #eee5db;
+  --burgundy: #722f37;
+  --burgundy-dark: #4b1e25;
+  --text: #332a29;
+  --muted: #817571;
+  --white: #ffffff;
+  --border: #dfd2c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 85vh;
+  padding: 90px 8% 70px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.hero-content {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 600px;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--burgundy);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  margin-bottom: 24px;
+}
+
+.hero-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  margin-bottom: 24px;
+}
+
+.hero-content h3 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin-bottom: 22px;
+}
+
+.hero-content p {
+  max-width: 520px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--muted);
+
+}
+
+.hero-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   MEMORY PHOTOS
+========================= */
+
+.memory-card img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.memory-card-first {
+  grid-column: 2;
+  grid-row: 1;
+  width: 120%;
+  max-width: 700px;
+  justify-self: center;
+  transform: translateY(30px);
+}
+
+.memory-card-first img {
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================
+   BIRTHDAY LETTER
+========================= */
+
+.birthday-letter {
+  padding: 100px 8%;
+  background-color: var(--cream-dark);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 55px;
+}
+
+.letter-content {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 55px 60px;
+  background-color: var(--cream);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 35px rgba(75, 30, 37, 0.06);
+}
+
+.letter-content h1,
+.letter-content h2,
+.letter-content h3 {
+  font-family: "Parisienne", Georgia, serif;
+  color: var(--burgundy);
+  font-weight: 400;
+}
+
+.letter-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 28px;
+}
+
+.letter-content h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.letter-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.letter-content p {
+  margin-bottom: 20px;
+  line-height: 2;
+  color: var(--text);
+}
+
+.letter-content p:last-child {
+  margin-bottom: 0;
+}
+
+.letter-note {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+  color: var(--burgundy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* =========================
+   SOUNDTRACK SECTION
+========================= */
+
+.soundtrack {
+  padding: 100px 8%;
+  background-color: var(--cream);
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 65px;
+}
+
+.vinyl-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.soundtrack-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.soundtrack-content h1,
+.soundtrack-content h2,
+.soundtrack-content h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--burgundy);
+  font-weight: 400;
+}
+
+.soundtrack-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.soundtrack-content p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   VINYL RECORD
+========================= */
+
+.vinyl-record {
+  width: min(280px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    #292525 0,
+    #292525 2px,
+    #373030 3px,
+    #292525 5px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  animation: vinyl-spin 8s linear infinite;
+  animation-play-state: paused;
+}
+
+.vinyl-record:hover {
+  animation-play-state: running;
+}
+
+.vinyl-label {
+  width: 34%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--burgundy);
+  border: 5px solid #4b2428;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cream);
+  text-align: center;
+  padding: 8px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.8rem;
+}
+
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   PLAYLIST BUTTON
+========================= */
+
+.playlist-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  margin-top: 10px;
+  background-color: var(--burgundy);
+  color: var(--white);
+  border: 1px solid var(--burgundy);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.playlist-button:hover {
+  background-color: transparent;
+  color: var(--burgundy);
+  transform: translateY(-2px);
+}
+
+.playlist-button:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 4px;
+}
+
+.playlist-note {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 35px 8%;
+  background-color: var(--burgundy-dark);
+  color: var(--cream);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--cream);
+}
+
+.footer a {
+  color: var(--cream);
+  transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media screen and (max-width: 900px) {
+  .hero {
+    padding: 75px 6%;
+    gap: 35px;
+  }
+
+  .memory-card img {
+    height: 360px;
+  }
+
+  .birthday-letter {
+    padding: 75px 6%;
+    gap: 30px;
+  }
+
+  .letter-content {
+    padding: 40px 30px;
+  }
+
+  .soundtrack {
+    padding: 75px 6%;
+    gap: 35px;
+  }
+
+  .vinyl-record {
+    width: 240px;
+  }
+}
+
+/* =========================
+   MOBILE DEVICES
+========================= */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  /* Hero text followed by first photo */
+  .hero {
+    min-height: auto;
+    padding: 55px 6% 50px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .hero-content {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  .hero-content h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .hero-content h3 {
+    font-size: clamp(1.7rem, 7vw, 2.3rem);
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  .memory-card {
+    border-width: 7px;
+  }
+
+  .memory-card-first img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+  .memory-card img {
+    height: 340px;
+  }
+
+  /* Birthday letter followed by second photo */
+  @media (max-width: 768px) {
+    .birthday-letter {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 35px 18px;
+    }
+
+    .letter-content {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .letter-content h2 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 16px;
+    }
+
+    .letter-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+    .memory-card-second {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: none;
+    }
+
+    .memory-card-second img {
+        display: block;
+        width: 100%;
+        height: 350px;
+        max-height: none;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+}
+
+  /* Vinyl followed by soundtrack text */
+  .soundtrack {
+    padding: 60px 6%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  .vinyl-art {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 10px;
+  }
+
+  .soundtrack-content {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .vinyl-record {
+    width: 220px;
+  }
+
+  .playlist-button {
+    max-width: 100%;
+  }
+
+  .footer {
+    padding: 30px 6%;
+  }
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 45px 5% 35px;
+    gap: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .memory-card img {
+    height: 280px;
+  }
+
+  .birthday-letter {
+    padding: 45px 5%;
+  }
+
+  .letter-content {
+    padding: 30px 20px;
+  }
+
+  .letter-content h1 {
+    font-size: 2rem;
+  }
+
+  .letter-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .letter-content p {
+    font-size: 0.9rem;
+  }
+
+  .letter-note {
+    font-size: 1.05rem;
+  }
+
+  .soundtrack {
+    padding: 50px 5%;
+  }
+
+  .soundtrack-content h2 {
+    font-size: 2rem;
+  }
+
+  .vinyl-record {
+    width: 190px;
+  }
+
+  .playlist-button {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.hero-content .eyebrow {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+}
+
+.hero-content .eyebrow,
+.soundtrack-content .eyebrow {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--burgundy);
+}
