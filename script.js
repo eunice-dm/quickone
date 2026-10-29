@@ -1,8 +1,10 @@
 /* Playlist configuration */
 
-const playlistButton = document.querySelector(".playlist-button");
+const playlistURL =
+  "https://open.spotify.com/playlist/1YgD51NSJXrRVCbpWyBBBY";
 
-const playlistURL = "https://open.spotify.com/";
+playlistButton.href = playlistURL;
+
 
 playlistButton.href = playlistURL;
 
@@ -119,9 +121,7 @@ letterParagraphs.forEach(function (paragraph) {
     );
 
     if (updatedText !== null && updatedText.trim() !== "") {
-      paragraph.textContent = updatedText.trim();
-    }
-  });
+    paragraph.textContent = updatedText.trim();  }},
 });
 
 /* Sign-off personalisation */
@@ -129,7 +129,7 @@ letterParagraphs.forEach(function (paragraph) {
 const signOff = document.querySelector(".sign-off");
 
 signOff.style.cursor = "pointer";
-signOff.title = "Click to change your sign-off";
+signOff.title = "Click to change your [p] sign-off";
 
 signOff.addEventListener("click", function () {
   const updatedSignOff = prompt(
